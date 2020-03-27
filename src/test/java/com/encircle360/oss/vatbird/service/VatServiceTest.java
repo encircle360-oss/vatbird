@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -23,6 +23,6 @@ class VatServiceTest {
 
     @Test
     void checkVatId() {
-        vatService.checkVatId(CountryCode.DE, "313551330");
+        assertTrue(vatService.checkVatId(CountryCode.DE, "115235681"));
     }
 }
