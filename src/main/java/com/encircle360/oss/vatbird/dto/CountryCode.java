@@ -1,7 +1,10 @@
 package com.encircle360.oss.vatbird.dto;
 
-// TODO implement all EU countries
+/**
+ * All european country codes.
+ * Might be extended in future.
+ */
 public enum CountryCode {
 
-    DE,IT,ES
+    AI, AT, BE, BG, BM, CY, CZ, DE, DK, EE, EL, ES, FI, FR, GR, HR, HU, IE, IT, LT, LV, MT, NL, PL, PT, RO, SE, SI, SK, LU;
 }
