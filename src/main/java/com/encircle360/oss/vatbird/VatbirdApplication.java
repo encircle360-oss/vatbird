@@ -9,5 +9,4 @@ public class VatbirdApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(VatbirdApplication.class, args);
 	}
-
 }

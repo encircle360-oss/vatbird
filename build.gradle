@@ -1,8 +1,21 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'no.nils:wsdl2java:0.12'
+    }
+}
+
 plugins {
     id 'org.springframework.boot' version '2.2.6.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
+
+apply plugin: 'no.nils.wsdl2java'
 
 group = 'com.encircle360.oss.vatbird'
 version = '0.0.1-SNAPSHOT'
@@ -19,7 +32,9 @@ configurations {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -31,8 +46,21 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    implementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'junit:junit:4.12'
+    compile 'com.sun.xml.ws:rt:2.3.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
 test {
     useJUnitPlatform()
+}
+
+wsdl2java {
+    wsdlsToGenerate = [
+            ['-p', 'eu.europa.ec', '-autoNameResolution', "$projectDir/src/main/resources/wsdl/checkVatService.wsdl.xml"]
+    ]
+    wsdlDir = file("$projectDir/src/main/resources/wsdl")
+    locale = Locale.ENGLISH
+    cxfVersion = "3.3.1"
 }
