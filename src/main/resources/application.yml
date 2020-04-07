@@ -2,3 +2,7 @@ eu:
   vies:
     webservice:
       wsdl: http://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl
+
+vat-rates:
+  eu:
+    database: https://raw.githubusercontent.com/kdeldycke/vat-rates/master/vat_rates.csv

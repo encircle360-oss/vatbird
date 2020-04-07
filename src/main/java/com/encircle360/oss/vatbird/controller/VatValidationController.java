@@ -2,7 +2,7 @@ package com.encircle360.oss.vatbird.controller;
 
 import com.encircle360.oss.vatbird.dto.CheckVatIdResponse;
 import com.encircle360.oss.vatbird.dto.CountryCode;
-import com.encircle360.oss.vatbird.service.VatService;
+import com.encircle360.oss.vatbird.service.EUVatValidationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/vat-ids")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class VatController {
+public class VatValidationController {
 
-    private final VatService vatService;
+    private final EUVatValidationService euVatValidationService;
 
     @GetMapping("/{countryCode}/{vatId}")
     public ResponseEntity<CheckVatIdResponse> checkVatId(@PathVariable("countryCode") CountryCode countryCode, @PathVariable("vatId") String vatId) {
         CheckVatIdResponse checkVatIdResponse = CheckVatIdResponse.builder()
                 .countryCode(countryCode)
                 .vatId(vatId)
-                .isValid(vatService.checkVatId(countryCode, vatId))
+                .isValid(euVatValidationService.checkVatId(countryCode, vatId))
                 .build();
 
         if(checkVatIdResponse.isValid()) {

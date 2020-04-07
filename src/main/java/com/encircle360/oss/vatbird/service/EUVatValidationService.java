@@ -14,7 +14,7 @@ import java.net.URL;
 
 @Slf4j
 @Service
-public class VatService {
+public class EUVatValidationService {
 
     @Value("${eu.vies.webservice.wsdl}")
     private URL euWebserviceWsdl;
