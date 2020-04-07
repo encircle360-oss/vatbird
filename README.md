@@ -1,6 +1,7 @@
 ### VatBird - REST APIs to obtain VAT information
 This microservice exposes simple REST APIs that you can call to retrieve VAT information and also check wether a VAT id is valid.
 The validation checks run against the official VAT API from the european union. Since the EU's API is exposed as SOAP API you can use this service to have a clean and simple REST API.
+The VAT rates are provided by this [database](https://github.com/kdeldycke/vat-rates/blob/master/vat_rates.csv) (BSD 2-Clause license).
 
 _Currently we only support VAT ids from the european union. Feel free to contribute._
 
@@ -15,6 +16,12 @@ docker run -d --name=vatbird -p 8080:8080 registry.gitlab.com/encircle360-oss/va
 ```
 curl -X GET http://localhost:8080/vat-ids/DE/313551330
 {"countryCode":"DE","vatId":"313551330","valid":true}
+```
+
+#### Example getting vat rates
+```
+curl -X GET http://localhost:8080/vat-rates/DE
+{"territoryCode":"DE","currencyCode":"EUR","description":"Germany (member state) standard VAT rate.","rate":0.19}
 ```
 An openAPI spec with swagger-ui will be released soon.
 
