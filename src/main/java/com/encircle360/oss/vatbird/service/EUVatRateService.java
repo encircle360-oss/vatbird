@@ -1,9 +1,8 @@
 package com.encircle360.oss.vatbird.service;
 
 import com.encircle360.oss.vatbird.client.EUVatRateClient;
-import com.encircle360.oss.vatbird.dto.CountryCode;
-import com.encircle360.oss.vatbird.dto.EUVatRate;
-import com.encircle360.oss.vatbird.dto.EUVatRateCSVRow;
+import com.encircle360.oss.vatbird.dto.rates.EUVatRate;
+import com.encircle360.oss.vatbird.dto.rates.EUVatRateCSVRow;
 import com.opencsv.CSVReader;
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.RequiredArgsConstructor;

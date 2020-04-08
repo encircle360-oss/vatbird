@@ -1,6 +1,6 @@
 package com.encircle360.oss.vatbird.service;
 
-import com.encircle360.oss.vatbird.dto.CountryCode;
+import com.encircle360.oss.vatbird.dto.validation.CountryCode;
 import eu.europa.ec.CheckVatPortType;
 import eu.europa.ec.CheckVatService;
 import lombok.extern.slf4j.Slf4j;

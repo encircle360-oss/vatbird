@@ -1,6 +1,6 @@
 package com.encircle360.oss.vatbird.service;
 
-import com.encircle360.oss.vatbird.dto.CountryCode;
+import com.encircle360.oss.vatbird.dto.validation.CountryCode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

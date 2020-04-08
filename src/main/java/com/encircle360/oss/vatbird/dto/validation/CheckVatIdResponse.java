@@ -1,4 +1,4 @@
-package com.encircle360.oss.vatbird.dto;
+package com.encircle360.oss.vatbird.dto.validation;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

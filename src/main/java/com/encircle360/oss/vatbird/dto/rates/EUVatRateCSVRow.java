@@ -1,4 +1,4 @@
-package com.encircle360.oss.vatbird.dto;
+package com.encircle360.oss.vatbird.dto.rates;
 
 import com.opencsv.bean.CsvBindByName;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.encircle360.oss.vatbird.dto;
+package com.encircle360.oss.vatbird.dto.rates;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

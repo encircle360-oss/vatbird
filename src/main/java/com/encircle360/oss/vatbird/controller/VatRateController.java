@@ -1,6 +1,6 @@
 package com.encircle360.oss.vatbird.controller;
 
-import com.encircle360.oss.vatbird.dto.EUVatRate;
+import com.encircle360.oss.vatbird.dto.rates.EUVatRate;
 import com.encircle360.oss.vatbird.service.EUVatRateService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

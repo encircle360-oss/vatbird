@@ -1,7 +1,7 @@
 package com.encircle360.oss.vatbird.controller;
 
-import com.encircle360.oss.vatbird.dto.CheckVatIdResponse;
-import com.encircle360.oss.vatbird.dto.CountryCode;
+import com.encircle360.oss.vatbird.dto.validation.CheckVatIdResponse;
+import com.encircle360.oss.vatbird.dto.validation.CountryCode;
 import com.encircle360.oss.vatbird.service.EUVatValidationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
