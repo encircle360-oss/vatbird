@@ -1,7 +1,7 @@
 eu:
   vies:
     webservice:
-      wsdl: http://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl
+      wsdl: https://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl
 
 vat-rates:
   eu:
