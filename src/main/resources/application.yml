@@ -5,4 +5,15 @@ eu:
 
 vat-rates:
   eu:
-    database: https://raw.githubusercontent.com/kdeldycke/vat-rates/master/vat_rates.csv
+    database: https://raw.githubusercontent.com/kdeldycke/vat-rates/main/vat_rates.csv
+
+server:
+  port: 8080
+
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: "*"
