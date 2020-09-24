@@ -1,7 +1,7 @@
 ### VatBird - REST APIs to obtain VAT information
 This microservice exposes simple REST APIs that you can call to retrieve VAT information and also check wether a VAT id is valid.
 The validation checks run against the official VAT API from the european union. Since the EU's API is exposed as SOAP API you can use this service to have a clean and simple REST API.
-The VAT rates are provided by this [database](https://github.com/kdeldycke/vat-rates/blob/master/vat_rates.csv) (BSD 2-Clause license).
+The VAT rates are provided by this [database](https://github.com/kdeldycke/vat-rates/blob/main/vat_rates.csv) (BSD 2-Clause license).
 
 _Currently we only support VAT ids from the european union. Feel free to contribute._
 
